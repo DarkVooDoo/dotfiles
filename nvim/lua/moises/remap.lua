@@ -13,3 +13,8 @@ vim.keymap.set("n", "<leader>jm", "`a")
 vim.keymap.set("n", "<leader>pe", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "<leader>ne", vim.diagnostic.goto_next)
 
+vim.keymap.set("v", "<leader>r", function()
+    local text = vim.fn.expand('<cword>')
+    local phrase = vim.fn.input("Replace: ")
+    vim.cmd("%s/" .. text .. "/" .. phrase .."/gc")
+end)

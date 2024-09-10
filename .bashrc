@@ -112,6 +112,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+VERSET=$(curl --silent -X POST "https://api.ndml.fr/api/getverset" | jq .verset.texte)
+echo $VERSET
 cat<<'EOF'
    __________________________
   /\                         \
@@ -135,8 +137,6 @@ cat<<'EOF'
                \  / ______________________  /
                 \/_________________________/
 EOF
-VERSET=$(curl --silent -X POST "https://api.ndml.fr/api/getverset" | jq .verset.texte)
-echo $VERSET
 
 export GOPATH=$HOME/Projects
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
