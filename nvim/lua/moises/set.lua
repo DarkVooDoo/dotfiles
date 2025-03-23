@@ -16,7 +16,9 @@ vim.opt.incsearch = true
 
 vim.opt.scrolloff = 10
 
-vim.opt.colorcolumn = "130"
+vim.opt.colorcolumn = "160"
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = "number"
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   group = vim.api.nvim_create_augroup('highlight_yank', {}),
