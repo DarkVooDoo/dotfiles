@@ -183,10 +183,21 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+gaps inner 5px
+title_align center
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #1E3740 #1E3740 #ffffff #2e9ef4   #1E3740
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
         status_command i3status
+        i3bar_command i3bar --transparency
+        colors {
+            background #17181D
+            focused_workspace #3E6878 #3E6878 #FFFFFF
+        }
 }
 
 # Screenshots
@@ -195,7 +206,7 @@ bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow)
 bindsym Shift+Print exec --no-startup-id maim --select "/$HOME/Images/$(date)"
 
 # Clipboard Screenshots
-bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+Print exec :--no-startup-id maim | xclip -selection clipboard -t image/png
 bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
