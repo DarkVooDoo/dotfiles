@@ -1,4 +1,3 @@
-
 vim.opt.nu = true
 
 vim.opt.relativenumber = true
@@ -32,7 +31,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.opt.clipboard = "unnamedplus"
 
 vim.g.lightline = {
-    colorscheme = 'wombat',
+    colorscheme = 'molokai',
     active = {
         left = {{'mode', 'paste', 'gitbranch'}, {'readonly', 'filename', 'modified'}}
     },
