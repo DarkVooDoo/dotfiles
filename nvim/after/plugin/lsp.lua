@@ -30,7 +30,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
   end,
 })
-
+-- postgrestools postgres_lsp
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
@@ -54,6 +54,7 @@ cmp.setup({
 require("mason").setup({})
 require("mason-lspconfig").setup {
     automatic_enable = {
+        "sqls",
         "lua_ls",
         "vimls",
         "gopls", 
