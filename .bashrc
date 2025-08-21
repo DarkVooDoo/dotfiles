@@ -112,8 +112,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-VERSET=$(curl --silent -X POST "https://api.ndml.fr/api/getverset" | jq .verset.texte)
-echo $VERSET
 cat<<'EOF'
    __________________________
   /\                         \
