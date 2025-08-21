@@ -29,18 +29,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 vim.opt.clipboard = "unnamedplus"
 
-vim.g.lightline = {
-    colorscheme = 'molokai',
-    active = {
-        left = {{'mode', 'paste', 'gitbranch'}, {'readonly', 'filename', 'modified'}}
-    },
-    component_function = {
-        gitbranch = 'FugitiveHead'
-    }
-    -- in lua, the above line is syntactic sugar for: 
-    -- ['colorscheme'] = 'catppuccin'
-    -- this may be helpful if the option name has a reserved symbol in it like + or -
-    -- ['key-here'] = 'value'
-}
-
-vim.cmd.colorscheme("solarized-osaka")
+vim.cmd.colorscheme "catppuccin"

@@ -50,17 +50,3 @@ cmp.setup({
       ['<S-Tab>'] = cmp_action.select_prev_or_fallback(),
   }),
 })
-
-require("mason").setup({})
-require("mason-lspconfig").setup {
-    automatic_enable = {
-        "sqls",
-        "lua_ls",
-        "vimls",
-        "gopls", 
-        "golangci_lint_ls", 
-        "html",
-        "biome", "cssls", "yamlls"
-    }
-}
-
