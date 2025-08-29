@@ -29,4 +29,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 vim.opt.clipboard = "unnamedplus"
 
-vim.cmd.colorscheme "catppuccin"
+vim.api.nvim_set_hl(0, "TodoBg", {
+    bg = "#f38ba8", -- couleur de fond (par exemple: Catppuccin "red")
+    fg = "#1e1e2e", -- couleur du texte (par exemple: Catppuccin "base")
+    bold = true,
+})
+
+-- Ajouter le match sur les TODO: dans les commentaires
+vim.cmd([[match TodoBg /\v(TODO:|FIXME:)/]])

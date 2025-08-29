@@ -1,3 +1,9 @@
+require('telescope').setup{
+    defaults = {
+        layout_strategy = 'vertical',
+        layout_config = { height = 0.95, width = 0.6 },
+    },
+}
 local builtin = require('telescope.builtin')
 local action_state = require('telescope.actions.state')
 local actions = require('telescope.actions')
@@ -37,5 +43,6 @@ end
 vim.keymap.set("n", "<C-a>", "<Cmd>bprevious<Cr>")
 vim.keymap.set("n", "<C-z>", "<Cmd>bnext<Cr>")
 vim.keymap.set('n', '<leader>fb', buffer_searcher, {})
-vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
-vim.keymap.set("n", "<leader>ps", builtin.live_grep, {})
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set("n", "<leader>fs", builtin.live_grep, {})
+vim.keymap.set("n", "<leader>fe", builtin.diagnostics, {})

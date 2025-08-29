@@ -7,12 +7,11 @@ vim.keymap.set("i", "[", "[]<LEFT>")
 
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-vim.keymap.set("n", "<leader>pt", "<Cmd>wa<CR>")
+vim.keymap.set("n", "<leader>sf", "<Cmd>wa<CR>")
 vim.keymap.set("n", "<leader>ib", "=%")
 vim.keymap.set("n", "<leader>jm", "`a")
 vim.keymap.set("n", "<leader>pe", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "<leader>ne", vim.diagnostic.goto_next)
-
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
