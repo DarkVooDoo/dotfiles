@@ -1,1 +1,1 @@
-/home/darkvoodoo/.config/i3
+/home/darkvoodoo/.config/i3/
