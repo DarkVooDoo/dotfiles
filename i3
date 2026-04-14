@@ -1,1 +1,0 @@
-/home/darkvoodoo/.config/i3/
